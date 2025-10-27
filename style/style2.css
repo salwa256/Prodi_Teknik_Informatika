@@ -1,0 +1,241 @@
+/* RESET DASAR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ANIMASI DASAR */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== HEADER (TENTANG) ===== */
+header.tentang {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px 200px;
+    background: linear-gradient(135deg, #E6CE2A, #998727);
+    overflow: hidden;
+    animation: fadeInUp 1s ease-out;
+}
+
+header.tentang .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 1;
+    animation: zoomIn 2s ease-in-out;
+}
+
+header.tentang .title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+header.tentang .title h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    letter-spacing: 2px;
+}
+
+header.tentang .tentang2 {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 40px auto 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 1.5s ease-out;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* ===== BAGIAN TIM ===== */
+.tim {
+    text-align: center;
+    padding: 80px 20px;
+    background: #fff;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.tim h2 {
+    display: inline-block;
+    background: linear-gradient(135deg, #E6CE2A, #998727);
+    color: white;
+    padding: 20px 50px;
+    border-radius: 40px;
+    font-size: 2rem;
+    margin-bottom: 60px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+/* Container Tim */
+.tim-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Setiap Anggota */
+.tim-isi {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 20px;
+    transition: all 0.4s ease;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.tim-isi:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Foto Anggota */
+.tim-isi .foto {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: #E6CE2A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tim-isi .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.tim-isi:hover .foto img {
+    transform: scale(1.1);
+}
+
+/* Nama Anggota */
+.tim-isi p {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+    header.tentang {
+        padding: 80px 20px 160px;
+    }
+
+    header.tentang .title h1 {
+        font-size: 2.5rem;
+    }
+
+    header.tentang .tentang2 {
+        max-width: 700px;
+        font-size: 1rem;
+    }
+
+    .tim h2 {
+        font-size: 1.8rem;
+        padding: 15px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header.tentang {
+        padding: 60px 20px 120px;
+    }
+
+    .tim-container {
+        gap: 30px;
+    }
+
+    .tim-isi {
+        width: 200px;
+        padding: 15px;
+    }
+
+    .tim-isi .foto {
+        height: 200px;
+    }
+
+    .tim-isi p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header.tentang {
+        padding: 50px 15px 100px;
+    }
+
+    header.tentang .title h1 {
+        font-size: 2rem;
+    }
+
+    header.tentang .tentang2 {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+
+    .tim {
+        padding: 60px 15px;
+    }
+
+    .tim h2 {
+        font-size: 1.5rem;
+        padding: 12px 25px;
+    }
+
+    .tim-container {
+        gap: 20px;
+    }
+
+    .tim-isi {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .tim-isi .foto {
+        height: 180px;
+    }
+}

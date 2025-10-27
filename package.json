@@ -1,0 +1,12 @@
+{
+  "name": "web_server",
+  "version": "1.0.0",
+  "description": "web prodi teknik informatika",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server . -p 8000 -c-1 -o beranda.html"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

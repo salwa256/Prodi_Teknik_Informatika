@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="tittle">
+            <img src="img/images-removebg-preview 1.png" alt="">
+            <div class="text">
+                <h1>PROGRAM STUDI</h1>
+                <h2>TEKNIK INFORMATIKA</h2>
+                <p>Politeknik Baja Tegal</p>
+            </div>
+        </div>
+        <nav id="nav-menu">
+            <a href="beranda.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="prospek.html">Prospek Kerja</a>
+            <a href="tentang.html">Tentang</a>
+        </nav>
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="hero">
+        <img src="img/image 1.png" alt="">
+        <div class="overlay">
+            <p class="judul">Selamat Datang di Website Resmi</p>
+            <h2>PRODI TEKNIK INFORMATIKA</h2>
+            <p>TERAKREDITASI</p>
+            <h3>Baik</h3>
+            <a href="https://pbjt.ac.id/" target="_blank" class="button">Cari Tahu Tentang Kami</a>
+        </div>
+    </section>
+    <section class="tujuan">
+        <h2 class="judul">VISI, MISI DAN TUJUAN PRODI TEKNIK INFORMATIKA</h2>
+        <h2 class="visi">VISI</h2>
+        <p>Menjadi Program Studi dengan lulusan yang berkualitas di bidang Teknologi Informasi serta memiliki kemampuan kreatif dan inovatif dan mampu berdaya saing global.</p>
+        <h2 class="misi">MISI</h2>
+        <ol>
+            <li>Melakukan peningkatan mutu Program Studi.</li>
+            <li>Membekali mahasiswa sebagai calon ahli madya teknik Informatika yang mandiri dan terampil.</li>
+            <li>Meningkatkan softskill mahasiswa di bidang teknik Informatika.</li>
+            <li>Meningkatkan kerja sama dengan lembaga atau institusi lain dalam upaya meningkatkan mutu program studi dan kegiatan akademik.</li>
+        </ol>
+        <h2 class="tujuan">TUJUAN</h2>
+        <ol>
+            <li>Menghasilkan lulusan vokasi yang unggul dalam bidang Teknik Informatika.</li>
+            <li>Menghasilkan lulusan yang mampu menerapkan ilmu di bidang teknik informatika dalam menangani masalah yang dihadapi.</li>
+            <li>Menghasilkan sumber daya manusia yang memiliki integritas, profesionalitas yang mampu bersaing.</li>
+            <li class="bwh">Memiliki mitra kerja sama dengan berbagai lembaga yang profesional dan kompeten dalam bidang teknologi informasi baik yang bersifat lokal, nasional dan internasional.</li>
+        </ol>
+    </section>
+
+    <!-- ===== GALERI ===== -->
+  <section class="galeri">
+    <h2>Galeri Kegiatan & Prestasi Teknik Informatika</h2>
+    <p class="deskripsi-galeri">
+      Dokumentasi berbagai kegiatan, fasilitas laboratorium, dan prestasi mahasiswa
+      Program Studi Teknik Informatika Politeknik Baja Tegal.
+    </p>
+
+    <div class="galeri-section">
+  <h3>💻 Laboratorium Komputer</h3>
+  <div class="galeri-container">
+    <div>
+      <img src="img/IMG_1736-1536x862.jpg" alt="Lab Komputer 1">
+      <p>Lab Komputer</p>
+    </div>
+
+    <div>
+      <img src="img/lab2.jpg" alt="Lab Komputer 2">
+      <p>Ruang Laboratorium Multimedia</p>
+    </div>
+
+    <div>
+      <img src="img/lab3.jpg" alt="Praktikum Jaringan">
+      <p>Praktikum Jaringan Komputer</p>
+    </div>
+
+    <div>
+      <img src="img/lab4.jpg" alt="Mahasiswa sedang praktikum">
+      <p>Mahasiswa Sedang Praktikum</p>
+    </div>
+  </div>
+</div>
+
+    <div class="galeri-section">
+  <h3>🎓 Mahasiswa Berprestasi</h3>
+  <div class="galeri-container">
+    <div>
+      <img src="img/IMG_0537-600x450.jpg" alt="Mahasiswa Berprestasi 1">
+      <p>Mahasiswa Politeknik Baja Tegal lolos MSIB 2024</p>
+    </div>
+
+    <div>
+      <img src="img/Prestasi-600x450.jpg" alt="Mahasiswa Berprestasi 2">
+      <p>22 Mahasiswa TI Lolos Coding Camp DBS Foundation 2025</p>
+    </div>
+
+    <div>
+      <img src="img/prestasi3.jpg" alt="Mahasiswa Berprestasi 3">
+      <p>............</p>
+    </div>
+  </div>
+</div>
+
+    <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="alamat">
+      <p class="alamat1">Alamat Politeknik Baja Tegal</p>
+      <p class="alamat2">Jl. Raya Dukuhwaru, Keplik, Dukuhwaru, Kec. Dukuhwaru, Kabupaten Tegal, Jawa Tengah 52451</p>
+      <p class="tlp">No Telp. (0283) 61966309</p>
+      <p class="email">Email Address : info@pbjt.ac.id | poltekbaja@gmail.com</p>
+    </div>
+  </footer>
+
+    <script>
+        // JavaScript untuk toggle burger menu
+        const burgerMenu = document.getElementById('burger-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

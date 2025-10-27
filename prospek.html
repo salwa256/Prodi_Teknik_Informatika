@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prospek Kerja | Teknik Informatika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+    /* Tambahan untuk interaksi */
+    .job-list li {
+      list-style: none;
+      background: linear-gradient(180deg, #c8b321, #e6ce2a);
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .job-list li:hover {
+      background: #bcae1a;
+      transform: scale(1.02);
+    }
+
+    .job-description {
+      display: none;
+      margin: 10px auto 20px;
+      background: #fff7c7;
+      border-left: 5px solid #c5a100;
+      border-radius: 10px;
+      padding: 15px;
+      width: 70%;
+      font-size: 15px;
+      line-height: 1.6;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="tittle">
+      <img src="img/images-removebg-preview 1.png" alt="">
+      <div class="text">
+        <h1>PROGRAM STUDI</h1>
+        <h2>TEKNIK INFORMATIKA</h2>
+        <p>Politeknik Baja Tegal</p>
+      </div>
+    </div>
+    <nav id="nav-menu">
+      <a href="beranda.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="prospek.html" class="active">Prospek Kerja</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
+    <div class="burger-menu" id="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="content fade-in">
+    <h2>Prospek Kerja Lulusan Teknik Informatika</h2>
+    <ul class="job-list">
+      <li data-job="software">Software Engineer / Programmer</li>
+      <div id="desc-software" class="job-description">
+        Seorang Software Engineer atau Programmer bertugas merancang, mengembangkan, dan memelihara perangkat lunak. 
+        Mereka menggunakan bahasa pemrograman seperti Java, Python, atau C++ untuk menciptakan aplikasi yang efisien dan mudah digunakan.
+      </div>
+
+      <li data-job="web">Web Developer</li>
+      <div id="desc-web" class="job-description">
+        Web Developer mengembangkan dan memelihara situs web agar berfungsi dengan baik dan menarik secara visual. 
+        Mereka bekerja dengan HTML, CSS, JavaScript, serta framework seperti React atau Laravel.
+      </div>
+
+      <li data-job="database">Database Administrator</li>
+      <div id="desc-database" class="job-description">
+        Database Administrator (DBA) bertanggung jawab mengelola sistem basis data, menjaga keamanan data, 
+        dan memastikan performa sistem berjalan optimal.
+      </div>
+
+      <li data-job="support">IT Support Specialist</li>
+      <div id="desc-support" class="job-description">
+        IT Support Specialist membantu pengguna dalam mengatasi masalah teknis seperti jaringan, perangkat keras, dan perangkat lunak.
+      </div>
+
+      <li data-job="network">Network Engineer</li>
+      <div id="desc-network" class="job-description">
+        Network Engineer mendesain dan mengelola jaringan komputer untuk memastikan komunikasi data berjalan lancar dan aman.
+      </div>
+
+      <li data-job="uiux">UI/UX Designer</li>
+      <div id="desc-uiux" class="job-description">
+        UI/UX Designer bertugas menciptakan tampilan antarmuka yang menarik serta pengalaman pengguna yang nyaman dan intuitif.
+      </div>
+
+      <li data-job="data">Data Analyst</li>
+      <div id="desc-data" class="job-description">
+        Data Analyst mengumpulkan, mengolah, dan menganalisis data untuk membantu perusahaan membuat keputusan berbasis data.
+      </div>
+    </ul>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="alamat">
+      <p class="alamat1">Alamat Politeknik Baja Tegal</p>
+      <p class="alamat2">Jl. Raya Dukuhwaru, Keplik, Dukuhwaru, Kec. Dukuhwaru, Kabupaten Tegal, Jawa Tengah 52451</p>
+      <p class="tlp">No Telp. (0283) 61966309</p>
+      <p class="email">Email Address : info@pbjt.ac.id | poltekbaja@gmail.com</p>
+    </div>
+  </footer>
+
+  <script>
+    // --- Fungsi burger menu ---
+    const burgerMenu = document.getElementById('burger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // --- Fungsi toggle deskripsi pekerjaan ---
+    const jobItems = document.querySelectorAll('.job-list li');
+    jobItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const jobId = item.getAttribute('data-job');
+        const desc = document.getElementById('desc-' + jobId);
+
+        document.querySelectorAll('.job-description').forEach(d => {
+          if (d !== desc) d.style.display = 'none';
+        });
+
+        desc.style.display = (desc.style.display === 'block') ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>

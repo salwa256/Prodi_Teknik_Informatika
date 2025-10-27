@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil & Tentang | Prodi Teknik Informatika</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="tittle">
+      <img src="img/images-removebg-preview 1.png" alt="Logo Politeknik Baja Tegal">
+      <div class="text">
+        <h1>PROGRAM STUDI</h1>
+        <h2>TEKNIK INFORMATIKA</h2>
+        <p>Politeknik Baja Tegal</p>
+      </div>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="beranda.html">Beranda</a>
+      <a href="profil.html" class="active">Profil</a>
+      <a href="prospek.html">Prospek Kerja</a>
+      <a href="tentang.html">Tentang</a>
+    </nav>
+
+    <div class="burger-menu" id="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- ================= PROFIL SECTION ================= -->
+  <section class="content">
+    <h2>PROFIL PROGRAM STUDI</h2>
+    <p>
+      Program Studi <strong>Teknik Informatika</strong> Politeknik Baja Tegal berdiri dengan tujuan menghasilkan lulusan yang 
+      memiliki kemampuan di bidang <strong>teknologi informasi, rekayasa perangkat lunak, jaringan komputer,</strong> dan 
+      <strong>keamanan sistem</strong>. Program studi ini dirancang untuk mendukung kebutuhan industri digital yang terus berkembang.
+    </p>
+    <p>
+      Mahasiswa dibimbing oleh dosen-dosen profesional dan berpengalaman dalam dunia industri IT, 
+      serta difasilitasi dengan laboratorium modern untuk mendukung kegiatan praktikum dan penelitian.
+      Dengan pendekatan pembelajaran berbasis <strong>vokasi</strong>, mahasiswa tidak hanya memahami teori, 
+      tetapi juga siap untuk beradaptasi di dunia kerja nyata.
+    </p>
+
+    <img src="img/IMG_1736-1536x862.jpg" alt="Mahasiswa Teknik Informatika" class="content-img">
+
+    <p>
+      Kami berkomitmen untuk menghasilkan lulusan yang <strong>berintegritas, kreatif, inovatif,</strong> 
+      dan mampu bersaing secara <strong>nasional maupun global</strong>. 
+      Program Studi Teknik Informatika Politeknik Baja Tegal menjadi tempat terbaik untuk memulai karier di bidang teknologi digital.
+    </p>
+  </section>
+
+  <!-- ================= VISI MISI TUJUAN ================= -->
+  <section class="tujuan">
+    <h2 class="judul">VISI, MISI, DAN TUJUAN</h2>
+
+    <h2 class="visi">VISI</h2>
+    <p>
+      Menjadi Program Studi dengan lulusan yang berkualitas di bidang Teknologi Informasi serta memiliki kemampuan kreatif, 
+      inovatif, dan berdaya saing global.
+    </p>
+
+    <h2 class="misi">MISI</h2>
+    <ol>
+      <li>Melakukan peningkatan mutu Program Studi.</li>
+      <li>Membekali mahasiswa agar mandiri dan terampil di bidang Teknik Informatika.</li>
+      <li>Meningkatkan soft skill mahasiswa untuk menghadapi perkembangan industri.</li>
+      <li>Menjalin kerja sama dengan lembaga lain guna meningkatkan mutu akademik.</li>
+    </ol>
+
+    <h2 class="tujuan">TUJUAN</h2>
+    <ol>
+      <li>Menghasilkan lulusan vokasi yang unggul dalam bidang Teknik Informatika.</li>
+      <li>Menghasilkan lulusan yang mampu menerapkan ilmu dan teknologi untuk menyelesaikan masalah nyata.</li>
+      <li>Menghasilkan SDM yang berintegritas, profesional, dan siap bersaing global.</li>
+      <li>Memiliki mitra kerja sama dengan berbagai lembaga profesional di bidang teknologi informasi.</li>
+    </ol>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="alamat">
+      <p class="alamat1">Alamat Politeknik Baja Tegal</p>
+      <p class="alamat2">Jl. Raya Dukuhwaru, Keplik, Dukuhwaru, Kec. Dukuhwaru, Kabupaten Tegal, Jawa Tengah 52451</p>
+      <p class="tlp">No Telp. (0283) 61966309</p>
+      <p class="email">Email Address : info@pbjt.ac.id | poltekbaja@gmail.com</p>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPT MENU ================= -->
+  <script>
+    const burgerMenu = document.getElementById('burger-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
